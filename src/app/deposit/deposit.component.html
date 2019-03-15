@@ -1,0 +1,39 @@
+<div class="texting">
+    Select the type of deposit
+  </div>
+  <select (change)="abc(op.value)" #op class="form-control form-control-lg">
+    <option value=1>Select</option>
+    <option value=2>Fixed Deposit</option>
+    <option value=3>Recurrence Deposit</option>
+  </select>
+  
+  
+  <section *ngIf="calc" class="get-in-touch">
+      <h1 class="title">{{loan}} DEPOSIT</h1>
+      <form class="contact-form row" (submit) = "calculate(amount.value,tenure.value,interest.value)">
+         <div class="form-field col-lg-12 ">
+            <input id="company" class="input-text js-input" #amount type="text" required>
+            <label class="label" for="company">Amount</label>
+         </div>
+          <div class="form-field col-lg-12 ">
+            <input id="phone" class="input-text js-input" #tenure type="text" required>
+            <label class="label" for="phone">Tenure (in months)</label>
+         </div>
+         <div class="form-field col-lg-12">
+            <input id="message" class="input-text js-input" #interest type="text" value={{roi}} disabled required>
+            <label class="label" for="message">Interest</label>
+         </div>
+         <div class="form-field col-lg-12">
+            <input class="submit-btn" type="submit" value="CALCULATE">
+         </div><br><br><br>
+         <div class="form-field col-lg-12">
+              <br><br>
+           <label class="label" for="phone">EMI PER MONTH: {{res}}</label>
+         </div>
+      </form>
+     
+   </section>
+   
+  
+  
+  

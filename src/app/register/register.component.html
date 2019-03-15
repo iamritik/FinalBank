@@ -1,0 +1,35 @@
+<div class="wrapper">
+<div class="container">
+  <div class="row" style="margin-top:20px">
+    <div class="jumbotron vertical-center">
+      <form class="container" [formGroup]="form">
+        <fieldset>
+          <h2>Fill your details</h2>
+          <hr class="colorgraph">
+            <input type="text" class="form-control input-lg" placeholder="Username" #user formControlName="username">
+            <input type="text" class="form-control input-lg" placeholder="Account Number" #account formControlName="account">
+            <input type="text" class="form-control input-lg" placeholder="ISFC Code" #isfc formControlName="isfc">
+            <input type="text" class="form-control input-lg" placeholder="Mobile Number" #mobile formControlName="mobile">
+            <input type="password" class="form-control input-lg" placeholder="Password" #pwd formControlName="pwd" >
+            <input type="password" class="form-control input-lg" placeholder="Confirm Password" #conf formControlName="conf">
+          <hr class="colorgraph">
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <button type="submit" class="btn btn-block btn-login" [disabled]="!form.valid"
+                (click)="addUser(user.value,account.value,isfc.value,mobile.value,pwd.value)">Register</button>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <input type="button" class="btn btn-lg btn-success btn-block" value="Back" (click) = "navigate()">
+              </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+  </div>
+  <div align="center" *ngIf="done" id="text">
+    New user created. Click back to go to the login page.
+  </div>
+</div>
+</div>

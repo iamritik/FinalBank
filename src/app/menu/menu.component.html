@@ -1,0 +1,38 @@
+
+<link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet'> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LGBT Bank</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="loan">Loans</a></li>
+                        <li><a>Cards</a></li>
+                        <li><a routerLink="deposit">Deposits</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a routerLink="profile"><i class="fas fa-user-circle"></i> Profile</a></li>
+                <li><a routerLink="">Logout</a></li>
+                <li><a routerLink="contactus">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

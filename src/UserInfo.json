@@ -1,0 +1,53 @@
+{
+  "UserInfo": [
+    {
+      "id": "Ritik",
+      "account": 315456901245,
+      "isfc": 123456789012,
+      "mobile": 7206674173,
+      "pwd": "admin"
+    },
+    {
+      "id": "piyush",
+      "account": "123341272837",
+      "isfc": "284574728726",
+      "mobile": "8726484762",
+      "pwd": "piyush"
+    },
+    {
+      "id": "Raunaq",
+      "account": "282718172882",
+      "isfc": "983758296754",
+      "mobile": "7206189625",
+      "pwd": "raunaq"
+    },
+    {
+      "id": "Naveen",
+      "account": "123447896541",
+      "isfc": "123544563210",
+      "mobile": "7896541230",
+      "pwd": "naveen"
+    },
+    {
+      "id": "Komal",
+      "account": "123447345562",
+      "isfc": "123473833210",
+      "mobile": "7896541230",
+      "pwd": "naveen"
+    },
+    {
+      "id": "iamritik",
+      "account": "123454566122",
+      "isfc": "123454566122",
+      "mobile": "1236547890",
+      "pwd": "ritik"
+    },
+    {
+      "id": "asdaa",
+      "account": "123454566122",
+      "isfc": "123454566122",
+      "mobile": "7896541230",
+      "pwd": "asd"
+    }
+  ]
+}
