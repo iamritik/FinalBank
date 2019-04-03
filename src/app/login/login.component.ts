@@ -5,6 +5,7 @@ import { Http } from '@angular/http';
 import { User } from '../User';
 import { DbService } from '../services/db.service';
 import { SecurityService } from '../services/security.service';
+import { ProfService } from '../services/prof.service';
 
 @Component({
   selector: 'login',
@@ -12,7 +13,7 @@ import { SecurityService } from '../services/security.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private router:Router,private http:DbService,private sec:SecurityService) { }
+  constructor(private router:Router,private http:DbService,private sec:SecurityService,private us: ProfService) { }
 
   form;
   disp:boolean = false;
@@ -36,14 +37,20 @@ export class LoginComponent implements OnInit {
   }
 
   getUsername(user:string){
-    this.username = user;
+    this.us.username = user;
     this.http.get(user).subscribe(
       (response:any)=>this.obj = response.json()
     )
   }
 
   pass(conf){
+    
+
     if(conf===this.obj.pwd){
+      this.us.password = this.obj.pwd;
+      this.us.mobile = this.obj.mobile;
+      this.us.account = this.obj.account;
+      this.us.isfc = this.obj.isfc;
       this.disp = true;
       this.sec.setUserLoggedIn();
     }

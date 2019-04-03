@@ -15,7 +15,10 @@ export class DbService {
   }
   url:string = "http://localhost:3000/UserInfo/"
 
+  nice:User;
+
   postUser(user:User){
+    this.nice = user;
     return this.http.post(this.url,user)
       .map((response:any)=>response);
 
@@ -26,4 +29,8 @@ export class DbService {
       .map((response:any)=>response)
   }
 
+  update(id:string,user:User){
+    return this.http.put(this.url+id,user)
+      .map((response:any)=>response.json())
+  }
 }

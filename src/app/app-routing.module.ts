@@ -9,6 +9,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AuthGuard } from './auth.guard';
 import { DepositComponent } from './deposit/deposit.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChangePasswordComponent } from './profile/change-password/change-password.component';
 
 const routes: Routes = [
     {
@@ -38,9 +39,24 @@ const routes: Routes = [
       },
       {
         path:'profile',
-        component:ProfileComponent
+        component:ProfileComponent,
+        children:[
+          
+        ]
       }
     ]
+  },
+  {
+      path:'change',
+      component:ChangePasswordComponent
+    
+  },
+  {
+  
+      path:'profile',
+      component:ProfileComponent
+    
+  
   }
 ];
 

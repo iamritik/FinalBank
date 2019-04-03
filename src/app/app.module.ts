@@ -14,7 +14,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { SecurityService } from './services/security.service';
 import { DepositComponent } from './deposit/deposit.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ForProfileService } from './services/for-profile.service';
+import { ChangePasswordComponent } from './profile/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { ForProfileService } from './services/for-profile.service';
     LoanComponent,
     ContactusComponent,
     DepositComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,7 @@ import { ForProfileService } from './services/for-profile.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [DbService,CalcService,SecurityService,ForProfileService],
+  providers: [DbService,CalcService,SecurityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
